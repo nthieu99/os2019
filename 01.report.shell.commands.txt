@@ -1,0 +1,56 @@
+user@user-virtual-machine:~$ echo hello world
+hello world
+user@user-virtual-machine:~$ passwd
+Changing password for user.
+(current) UNIX password: 
+passwd: Authentication token manipulation error
+passwd: password unchanged
+user@user-virtual-machine:~$ date
+Thứ hai, 01 Tháng 4 năm 2019 11:01:10 +07
+user@user-virtual-machine:~$ hostname
+user-virtual-machine
+user@user-virtual-machine:~$ arch
+x86_64
+user@user-virtual-machine:~$ uname -a
+Linux user-virtual-machine 4.18.0-10-generic #11-Ubuntu SMP Thu Oct 11 15:13:55 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+user@user-virtual-machine:~$ uptime
+ 11:01:40 up 2 min,  1 user,  load average: 0,68, 0,85, 0,37
+user@user-virtual-machine:~$ who am i
+user@user-virtual-machine:~$ whoami
+user
+user@user-virtual-machine:~$ who
+user     :0           2019-04-01 10:59 (:0)
+user@user-virtual-machine:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),118(lpadmin),129(sambashare)
+user@user-virtual-machine:~$ last
+user     :0           :0               Mon Apr  1 10:59   still logged in
+reboot   system boot  4.18.0-10-generi Mon Apr  1 10:58   still running
+user     :0           :0               Mon Apr  1 10:58 - down   (00:00)
+user     :0           :0               Mon Apr  1 10:54 - 10:57  (00:02)
+user     :0           :0               Mon Apr  1 10:08 - 10:54  (00:45)
+reboot   system boot  4.18.0-10-generi Mon Apr  1 10:07 - 10:58  (00:50)
+
+wtmp begins Mon Apr  1 10:07:47 2019
+user@user-virtual-machine:~$ finger
+
+Command 'finger' not found, but can be installed with:
+
+sudo apt install finger
+
+user@user-virtual-machine:~$ w
+ 11:02:13 up 3 min,  1 user,  load average: 0,38, 0,75, 0,36
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+user     :0       :0               10:59   ?xdm?  25.21s  0.02s /usr/lib/gdm3/g
+user@user-virtual-machine:~$ dmesg
+........
+[   13.576799] kauditd_printk_skb: 26 callbacks suppressed
+[   13.576801] audit: type=1400 audit(1554091140.136:38): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-calculator.gnome-calculator" pid=842 comm="apparmor_parser"
+[   16.210043] audit: type=1400 audit(1554091142.768:39): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-calculator" pid=840 comm="apparmor_parser"
+[   17.099716] audit: type=1400 audit(1554091143.656:40): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=1191 comm="apparmor_parser"
+[   18.727312] audit: type=1400 audit(1554091145.284:41): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=1190 comm="apparmor_parser"
+[   20.383466] audit: type=1400 audit(1554091146.940:42): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-logs.gnome-logs" pid=1237 comm="apparmor_parser"
+[   21.206581] audit: type=1400 audit(1554091147.764:43): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-logs" pid=1236 comm="apparmor_parser"
+[   22.907657] audit: type=1400 audit(1554091149.464:44): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=1350 comm="apparmor_parser"
+[   24.467833] audit: type=1400 audit(1554091151.024:45): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=1349 comm="apparmor_parser"
+[   40.045535] rfkill: input handler disabled
+
