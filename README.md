@@ -12,4 +12,3 @@ Student Info
 
 * Name: Nguyen Trung Hieu
 * ID: Bi8-067
-
