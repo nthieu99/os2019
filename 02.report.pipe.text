@@ -1,0 +1,22 @@
+user@user-VirtualBox:~$ ls -la | grep list
+user@user-VirtualBox:~$ wc -l /etc/passwd
+44 /etc/passwd
+user@user-VirtualBox:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:        2041128      677744      474896       34492      888488     1175660
+Swap:        483800           0      483800
+user@user-VirtualBox:~$ lscpu
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              1
+On-line CPU(s) list: 0
+Thread(s) per core:  1
+Core(s) per socket:  1
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+
+user@user-VirtualBox:~$ find /home/user/Pictures -name "*.jpg" | wc -l
+0
+
