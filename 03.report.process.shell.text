@@ -1,0 +1,98 @@
+user@user-VirtualBox:~$ ps man
+  PID TTY      STAT   TIME COMMAND
+ 1756 tty2     -      0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_S
+    - -        Ssl+   0:00 -
+    - -        Ssl+   0:00 -
+    - -        Ssl+   0:00 -
+ 1759 tty2     -      0:47 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/
+    - -        Sl+    0:34 -
+    - -        Sl+    0:13 -
+ 1770 tty2     -      0:00 /usr/lib/gnome-session/gnome-session-binary --sessio
+    - -        Sl+    0:00 -
+    - -        Sl+    0:00 -
+    - -        Sl+    0:00 -
+    - -        Sl+    0:00 -
+ 2088 tty2     -      4:02 /usr/bin/gnome-shell
+    - -        Sl+    3:55 -
+    - -        Sl+    0:00 -
+    - -        Sl+    0:01 -
+    - -        Sl+    0:00 -
+    - -        Sl+    0:00 -
+    - -        Sl+    0:01 -
+    - -        Sl+    0:01 -
+ 2127 tty2     -      0:06 ibus-daemon --xim --panel disable
+    - -        Sl     0:02 -
+    - -        Sl     0:00 -
+    - -        Sl     0:03 -
+
+user@user-VirtualBox:~$ gnome-calculator
+
+user@user-VirtualBox:~$ ps aux | grep -i gnome-calculator
+user      7148 14.5  2.1 748460 44192 pts/0    Sl+  10:48   0:01 gnome-calculator
+user      7281  0.0  0.0  20340   892 pts/1    S+   10:48   0:00 grep --color=auto -i gnome-calculator
+
+user@user-VirtualBox:~$ cat /proc/7148/status
+Name:	gnome-calculato
+Umask:	0022
+State:	S (sleeping)
+Tgid:	7148
+Ngid:	0
+Pid:	7148
+PPid:	7137
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	4 24 27 30 46 118 129 1000 
+NStgid:	7148
+NSpid:	7148
+NSpgid:	7148
+NSsid:	7137
+VmPeak:	  757168 kB
+VmSize:	  740264 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   44200 kB
+VmRSS:	   44192 kB
+RssAnon:	   12644 kB
+RssFile:	   29496 kB
+RssShmem:	    2052 kB
+VmData:	   70276 kB
+VmStk:	     136 kB
+VmExe:	     888 kB
+VmLib:	   63500 kB
+VmPTE:	     576 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+Threads:	4
+SigQ:	0/7797
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001000
+SigCgt:	0000000180000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	2
+Speculation_Store_Bypass:	vulnerable
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	430
+nonvoluntary_ctxt_switches:	438
+
+user@user-VirtualBox:~$ kill -STOP 7148
+
+user@user-VirtualBox:~$ kill -CONT 7148
+
+user@user-VirtualBox:~$ kill -KILL 7148
+
+
+
+
