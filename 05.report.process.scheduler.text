@@ -1,0 +1,20 @@
+user@user-VirtualBox:~$ grep systemd /proc/sched_debug
+ S        systemd     1      7827.703113     72863   120         0.000000      9393.184607         0.000000 0 0 /autogroup-2
+ Ssystemd-journal   220      1397.323383     10559   119         0.000000      1738.242698         0.000000 0 0 /autogroup-4
+ S  systemd-udevd   248      4946.103117      5775   120         0.000000      3619.189854         0.000000 0 0 /autogroup-18
+ Ssystemd-timesyn   269       144.305545       223   120         0.000000       146.254003         0.000000 0 0 /autogroup-28
+ Ssystemd-resolve   270       260.660507       463   120         0.000000       262.389323         0.000000 0 0 /autogroup-29
+ S systemd-logind   391       562.202722      9047   120         0.000000       563.883930         0.000000 0 0 /autogroup-41
+ S        systemd  1715       833.863550      1071   120         0.000000       811.824226         0.000000 0 0 /autogroup-92
+
+ user@user-VirtualBox:~$ grep switch /proc/1/sched
+nr_switches                                  :                72915
+nr_voluntary_switches                        :                64006
+nr_involuntary_switches                      :                 8909
+
+user@user-VirtualBox:~$ grep switch /proc/1715/sched
+nr_switches                                  :                 1072
+nr_voluntary_switches                        :                  414
+nr_involuntary_switches                      :                  658
+
+
